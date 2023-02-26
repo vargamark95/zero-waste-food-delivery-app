@@ -1,8 +1,6 @@
 package org.food_delivery.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -20,5 +18,8 @@ public class Product {
     private String ingredients;
     private Integer weight;
     private Integer price;
+    @Lob
+    @Column(columnDefinition = "BLOB")
+    private byte[] image;
 
 }

@@ -8,10 +8,13 @@ import lombok.ToString;
 @Setter
 @ToString
 public class ProductDto {
-
+    private String id;
     private String name;
     private String ingredients;
     private String weigth;
     private String price;
+
+    @ToString.Exclude
+    private String image;
 
 }
